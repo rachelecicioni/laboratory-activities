@@ -75,7 +75,7 @@ ofstream DatiSperimentali;
 Faccio variare (R,rho) con le correzioni di taglia*/
 
 //Definisco le costanti necessarie per la correzione di taglia
-/*
+
 double omega_p=1.37*pow(10.,16); //in mn-1
 double gamma_bulk=1.08*pow(10.,14); //in mn-1
 double v_F=1.4*pow(10.,15); //in nm/s
@@ -147,10 +147,10 @@ for(int i=0; i<401; i++){
     }
 
 assorbanza_R_rho_corr.close();
-*/
+
 /*----------------------------------------------------------------------------------------------------------
 grafico l'andamento del chiquadro*/
-/*
+	
 int R_histo[r];
 int rho_histo[p];
 
@@ -198,10 +198,10 @@ c2->SaveAs("histo_2d_R_rho_corr.png");
 
 file_chiquadro_R_rho_corr.close();
 file_chiquadro_minimo_R_rho_corr.close();
-*/
+
 /*--------------------------------------------------------------------------------------------------------------------------
 Faccio variare (R,epsilonm) con le correzioni di taglia*/
-/*
+
 double epsilonm[m]; //R già ce l'ho e anche rho è il valore minimo
 double chiquadro_R_epsilonm[r][m];
 double chiquadro_R_epsilonm_log[r][m];
@@ -275,10 +275,10 @@ for(int i=0; i<401; i++){
     }
 
 assorbanza_R_epsilonm_corr.close();
-*/
+
 /*---------------------------------------------------------------------------------------------------------------------
 Grafichiamo l'istogramma 2D variando (R,epsilonm) con rho_minimo ottenuto dal predente grafico 2D*/
-/*
+
 int epsilonm_histo[m];
 
 R_histo[0]=1;
@@ -325,11 +325,11 @@ c3->SaveAs("histo_2d_R_epsilonm_corr.png");
 
 file_chiquadro_R_epsilonm_corr.close();
 file_chiquadro_minimo_R_epsilonm_corr.close();
-*/
+
 
 /*-------------------------------------------------------------------------------------------------------
 Faccio il grafico dell'assorbanza sperimentale, assorbanza_R_rho, assorbanza_R_epsilonm*/
-/*
+
 TMultiGraph *assorbanze = new TMultiGraph ();
 
 TGraph *assorbanza_exp_graph = new TGraph("AbsorbanceSpectra.dat");
@@ -385,7 +385,7 @@ legenda->AddEntry(assorbanza_R_epsilonm_corr_graph, "assorbanza (R,epsilonm)");
 legenda->Draw();
 
 	c1->SaveAs("graph_assorbanze_corr.png");
-*/
+
 /*------------------------------------------------------------------------------------------------------------------------------------------------
 Vario tutti e tre i parametri*/
 
